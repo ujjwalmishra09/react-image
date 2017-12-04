@@ -32,7 +32,7 @@ export default class Image extends Component {
         top: 0
       },
       placeHolder: {
-        maxWidth: 100,
+        width: 100,
         ...styles.placeHolder,
         position: 'absolute',
         left: 0,
@@ -62,7 +62,7 @@ export default class Image extends Component {
       <img
         style={styles.placeHolder}
         className={classNames.placeHolder}
-        src={errorImage && showErrorImage ? errorImage : placeHolder}
+        src={placeHolder && errorImage && showErrorImage ? errorImage : placeHolder}
       />
     );
   }
@@ -73,7 +73,7 @@ export default class Image extends Component {
     const styles = this.getStyles();
     return (
       <img
-        style={{ ...styles.image, opacity: showImage ? 0 : 1 }}
+        style={{ ...styles.image, opacity: showImage ? 1 : 0 }}
         className={classNames.image}
         src={imageUrl}
         alt={showImage ? this.props.alt : 'loading'}
@@ -116,5 +116,10 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  placeHolder: '../image/placeHolder.gif'
+  classNames: {},
+  styles: {
+    root: {},
+    image: {},
+    placeHolder: {}
+  }
 };
