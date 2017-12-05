@@ -5,7 +5,8 @@
   "main": "bin/index.js",
   "scripts": {
     "test": "eslint src",
-    "build": "rm -rf bin && mkdir bin && babel --presets=es2015,stage-2 src --out-dir bin"
+    "build": "react-scripts build",
+    "start": "react-scripts start"
   },
   "author": "Ujjwal Mishra <ujjwalmishra09@gmail.com/>",
   "license": "MIT",
@@ -18,11 +19,13 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-react": "^7.1.0"
+    "eslint-plugin-react": "^7.1.0",
+    "react-scripts": "1.0.17"
   },
   "dependencies": {
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "webpack": "^3.10.0"
   }
 }
