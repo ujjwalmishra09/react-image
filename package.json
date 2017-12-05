@@ -2,7 +2,6 @@
   "name": "react-image",
   "version": "1.0.0",
   "description": "Extended version of image",
-  "main": "bin/index.js",
   "scripts": {
     "test": "eslint src",
     "build": "react-scripts build",
